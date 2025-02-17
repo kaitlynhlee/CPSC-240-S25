@@ -8,8 +8,7 @@ global manager
 
 segment .data                 ;Place initialized data here
 msg_1 db "This program will manage your arrays of 64-bit floats", 10, 0
-msg_2 db "For the array enter a sequence of 64-bit floats separated by white space.", 10, 0
-msg_3 db "After the last input press enter followed by Control+D:", 10, 0
+msg_2 db "For the array enter a sequence of 5 64-bit floats separated by white space.", 10, 0
 msg_4 db "These numbers were received and placed into an array", 10, 0
 floatformat db 10, "%lf", 10, 0
 
