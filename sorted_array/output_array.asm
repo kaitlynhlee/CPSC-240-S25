@@ -38,17 +38,14 @@ pushf
  ; create index
 
 loop:
-;  conditions
-cmp r14, 5
-jge exit
+; check if end conditions are met
 
-mov rax, 1
-mov rdi, results
-movsd xmm0, [r15+r14*8]
-call printf
 
-inc r14
-jmp loop
+;print array value
+
+
+; increase index and continue loop
+
 
 exit:
 ;Restore the GPRs
