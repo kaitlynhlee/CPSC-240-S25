@@ -34,10 +34,11 @@ pushf
 
 
 ;store array address and array length in non-volatile registers to use when adding the registers together and calculating mean
-mov r15, rdi
-mov r14, 0
+ ; store array
+ ; create index
 
 loop:
+;  conditions
 cmp r14, 5
 jge exit
 
