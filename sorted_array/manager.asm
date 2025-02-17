@@ -52,9 +52,6 @@ mov rdi, msg_2
 call printf
 
 ;call input_array function in order to obtain the float values from user and place them into array
-mov rax, 0
-mov rdi, my_array
-call input_array
 
 
 
@@ -64,10 +61,7 @@ mov rdi, msg_4
 call printf
 
 ;call output_array function to loop through the array and print each value for the user to see
-mov rax, 0
-mov rdi, my_array
-mov rsi, 5
-call output_array
+
 
 
 ;Restore the GPRs
