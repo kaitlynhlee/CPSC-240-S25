@@ -34,38 +34,27 @@ push r15
 pushf
 
 ;store array address and array max size in non-volatile registers to use when inputting values into array as well as ensuring the number of values stays within the maximum
-mov r15, rdi
-mov r14, rsi
-
-mov r14, 5
+ ; mov array address to a register
+ ; create a max value
 
 
 ;set r13 to zero in order to use as a counter for the float point numbers for both array length and to ensure the number of values is within the limits
-mov r13, 0
+ ; create index var/register
 
 
 ; if number of values in the array is still less than size of array jump here to allow user to input floats
 loop:
-cmp r13, 5
-jge exit
+; check if end conditions are met
+
 
 ;make room on the stack then obtain user's floating point number input to put into the array
-push qword 0
-push qword 0
-mov rax, 0
-mov rdi, floatformat
-mov rsi, rsp
-call scanf
-movsd xmm15, [rsp]
-pop rax
-pop rax
+
 
 ;store the floating point number into its own address, the counters index in the array
-movsd [r15+r13*8], xmm15
+
 
 ;increase the counter for array size/number of values inputted so far, then jump back to top of the loop
-inc r13
-jmp loop
+
 
 
 ;exit and return to manager
