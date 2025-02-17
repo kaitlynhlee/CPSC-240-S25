@@ -30,11 +30,11 @@ push r15                                          ;Backup r15
 push rbx                                          ;Backup rbx
 pushf                                             ;Backup rflags
 
-mov rdx, [rdi]
-mov rcx, [rsi]
+ ; store dereferenced first arg into a resgister (rdx)
+ ; store dereferenced second arg into a resgister (rcx)
 
-mov [rdi], rcx
-mov [rsi], rdx
+;swap the values
+
 
 popf                                    ;Restore rflags
 pop rbx                                 ;Restore rbx
